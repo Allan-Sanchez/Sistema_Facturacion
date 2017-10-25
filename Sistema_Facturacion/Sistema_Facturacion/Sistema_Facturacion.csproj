@@ -35,6 +35,9 @@
     <Reference Include="LibConexionBD">
       <HintPath>..\..\..\..\..\..\Downloads\Documents\Universidad\programacion\Liprerias_Comunes_C#\LibConexionBD\LibConexionBD\bin\Debug\LibConexionBD.dll</HintPath>
     </Reference>
+    <Reference Include="LibLlenarGrids">
+      <HintPath>..\..\..\..\..\Downloads\Documents\Universidad\programacion\Liprerias_Comunes_C#\LibLlenarGrids\LibLlenarGrids\bin\Debug\LibLlenarGrids.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -48,6 +51,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Datos.cs" />
+    <Compile Include="Formularios\frmConsulta_Articulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmConsulta_Articulos.Designer.cs">
+      <DependentUpon>frmConsulta_Articulos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,6 +65,9 @@
     </Compile>
     <Compile Include="Clases\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\frmConsulta_Articulos.resx">
+      <DependentUpon>frmConsulta_Articulos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>

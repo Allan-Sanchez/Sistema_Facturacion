@@ -1,4 +1,5 @@
 ﻿using Sistema_Facturacion.Clases;
+using Sistema_Facturacion.Formularios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,15 +37,21 @@ namespace Sistema_Facturacion
                 MessageBox.Show("Debe ingresar una claver", "Error");
             }
 
-            if (Datos.Validar_Usuario(txtUsuario.Text,txtClave.Text))
+            if (!Datos.Validar_Usuario(txtUsuario.Text,txtClave.Text))
             {
-                MessageBox.Show("Fuck yeah...");
-            }
-            else
-            {
-                MessageBox.Show(Datos.Mensaje);
+                MessageBox.Show(Datos.Mensaje, "Error");
+                txtUsuario.Focus();
+                return;
             }
 
+            frmConsulta_Articulos miConsulta_Articulos = new frmConsulta_Articulos();
+            this.Hide();
+            miConsulta_Articulos.Show();
+            
+            
+
         }
+
+        
     }
 }
