@@ -44,13 +44,14 @@ namespace Sistema_Facturacion
                 return;
             }
 
-            frmConsulta_Articulos miConsulta_Articulos = new frmConsulta_Articulos();
+            frmPrincipal miPrincipal = new frmPrincipal();
             this.Hide();
-            miConsulta_Articulos.Show();
-            
+            miPrincipal.Show();
             
 
         }
+
+       
 
         
     }

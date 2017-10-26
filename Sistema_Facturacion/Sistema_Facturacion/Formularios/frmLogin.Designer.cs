@@ -112,7 +112,7 @@
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ingreso a Sistema";
-           
+            
             this.ResumeLayout(false);
             this.PerformLayout();
 

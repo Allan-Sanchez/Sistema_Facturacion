@@ -61,21 +61,23 @@
             this.cmbDepartamento.FormattingEnabled = true;
             this.cmbDepartamento.Location = new System.Drawing.Point(101, 24);
             this.cmbDepartamento.Name = "cmbDepartamento";
-            this.cmbDepartamento.Size = new System.Drawing.Size(125, 21);
+            this.cmbDepartamento.Size = new System.Drawing.Size(254, 21);
             this.cmbDepartamento.TabIndex = 1;
+            this.cmbDepartamento.SelectedIndexChanged += new System.EventHandler(this.cmbDepartamento_SelectedIndexChanged);
             // 
             // cmbIva
             // 
             this.cmbIva.FormattingEnabled = true;
-            this.cmbIva.Location = new System.Drawing.Point(289, 24);
+            this.cmbIva.Location = new System.Drawing.Point(503, 24);
             this.cmbIva.Name = "cmbIva";
-            this.cmbIva.Size = new System.Drawing.Size(125, 21);
+            this.cmbIva.Size = new System.Drawing.Size(278, 21);
             this.cmbIva.TabIndex = 3;
+            this.cmbIva.SelectedIndexChanged += new System.EventHandler(this.cmbIva_SelectedIndexChanged);
             // 
             // lblIva
             // 
             this.lblIva.AutoSize = true;
-            this.lblIva.Location = new System.Drawing.Point(247, 32);
+            this.lblIva.Location = new System.Drawing.Point(461, 32);
             this.lblIva.Name = "lblIva";
             this.lblIva.Size = new System.Drawing.Size(27, 13);
             this.lblIva.TabIndex = 2;

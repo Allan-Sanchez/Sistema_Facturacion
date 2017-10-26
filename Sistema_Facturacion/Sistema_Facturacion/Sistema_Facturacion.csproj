@@ -35,7 +35,11 @@
     <Reference Include="LibConexionBD">
       <HintPath>..\..\..\..\..\..\Downloads\Documents\Universidad\programacion\Liprerias_Comunes_C#\LibConexionBD\LibConexionBD\bin\Debug\LibConexionBD.dll</HintPath>
     </Reference>
-    <Reference Include="LibLlenarGrids">
+    <Reference Include="LibLlenarCombos">
+      <HintPath>..\..\..\..\..\Downloads\Documents\Universidad\programacion\Liprerias_Comunes_C#\LibLlenarCombos\LibLlenarCombos\bin\Debug\LibLlenarCombos.dll</HintPath>
+    </Reference>
+    <Reference Include="LibLlenarGrids, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\Downloads\Documents\Universidad\programacion\Liprerias_Comunes_C#\LibLlenarGrids\LibLlenarGrids\bin\Debug\LibLlenarGrids.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -51,6 +55,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Datos.cs" />
+    <Compile Include="Formularios\FrmArticulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmArticulos.Designer.cs">
+      <DependentUpon>FrmArticulos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmConsulta_Articulos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,12 +74,24 @@
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\Program.cs" />
+    <Compile Include="Formularios\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\FrmArticulos.resx">
+      <DependentUpon>FrmArticulos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmConsulta_Articulos.resx">
       <DependentUpon>frmConsulta_Articulos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -99,6 +121,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\delete %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\online-store.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left-chevron%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
