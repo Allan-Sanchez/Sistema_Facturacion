@@ -47,5 +47,74 @@ namespace Sistema_Facturacion.Clases
             return true;
 
         }
+
+        internal static bool NewProducto(Producto producto)
+        {
+            if (!conexion.AbrirConexion())
+            {
+                mensaje = conexion.Error;
+                conexion.CerrarConexion();
+                return false;
+            }
+            conexion.SQL = "INSERT INTO	Producto (Descripcion,Precio,Stock,Notas,IDIVA,IDDepartamento)"+
+                " VALUES ('"+producto.Descripcion+"',"+producto.Precio+","+producto.Stock+",'"+producto.Notas+
+                "',"+producto.IDIVA+","+producto.IDDepartamento+")";
+
+            if (!conexion.EjecutarSentencia(false))//falso por que estamos mandando la sentencia es por un querry
+            {
+                mensaje = conexion.Error;
+                conexion.CerrarConexion();
+                return false;
+            }
+
+            mensaje = "producto Ingresado correctamente";
+            conexion.CerrarConexion();
+            return true;
+        }
+
+        internal static bool UpdateProducto(Producto producto)
+        {
+            if (!conexion.AbrirConexion())
+            {
+                mensaje = conexion.Error;
+                conexion.CerrarConexion();
+                return false;
+            }
+            conexion.SQL = "UPDATE Producto SET Descripcion = '"+producto.Descripcion+"', Precio = "+producto.Precio+",Stock = "+producto.Stock
+                +", Notas = '"+producto.Notas+"',IDIVA = "+producto.IDIVA+", IDDepartamento = "+producto.IDDepartamento+"  WHERE IDProducto = " + producto.IDProducto;
+
+            if (!conexion.EjecutarSentencia(false))//falso por que estamos mandando la sentencia es por un querry
+            {
+                mensaje = conexion.Error;
+                conexion.CerrarConexion();
+                return false;
+            }
+
+            mensaje = "producto actualizado correctamente";
+            conexion.CerrarConexion();
+            return true;
+        }
+
+        internal static bool DeleteProducto(int idproducto)
+        {
+            if (!conexion.AbrirConexion())
+            {
+                mensaje = conexion.Error;
+                conexion.CerrarConexion();
+                return false;
+            }
+            conexion.SQL ="DELETE FROM Producto WHERE IDProducto ="+idproducto;
+
+            if (!conexion.EjecutarSentencia(false))//falso por que estamos mandando la sentencia es por un querry
+            {
+                mensaje = conexion.Error;
+                conexion.CerrarConexion();
+                return false;
+            }
+
+            mensaje = "producto eliminado correctamente";
+            conexion.CerrarConexion();
+            return true;
+        }
     }
 }

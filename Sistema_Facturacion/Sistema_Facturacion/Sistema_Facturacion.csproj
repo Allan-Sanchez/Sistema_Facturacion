@@ -56,12 +56,19 @@
   <ItemGroup>
     <Compile Include="Clases\Datos.cs" />
     <Compile Include="Clases\Producto.cs" />
+    <Compile Include="Clases\Usuarios.cs" />
     <Compile Include="Clases\Utilidades.cs" />
     <Compile Include="Formularios\FrmArticulos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\FrmArticulos.Designer.cs">
       <DependentUpon>FrmArticulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmBusqueda_Productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmBusqueda_Productos.Designer.cs">
+      <DependentUpon>frmBusqueda_Productos.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmConsulta_Articulos.cs">
       <SubType>Form</SubType>
@@ -85,6 +92,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\FrmArticulos.resx">
       <DependentUpon>FrmArticulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmBusqueda_Productos.resx">
+      <DependentUpon>frmBusqueda_Productos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmConsulta_Articulos.resx">
       <DependentUpon>frmConsulta_Articulos.cs</DependentUpon>

@@ -211,6 +211,49 @@ namespace Sistema_Facturacion.Formularios
         private void tsbGuardar_Click(object sender, EventArgs e)
         {
             if (!ValidarCampos()) return;
+
+            Producto producto = new Producto();
+            try
+            {
+                producto.IDProducto = Convert.ToInt32(txtIdProducto.Text);
+            }
+            catch (Exception)
+            {
+
+                producto.IDProducto = 0;
+            }
+          
+            producto.Descripcion = txtDescripcion.Text;
+            producto.Precio = Convert.ToDecimal(txtPrecio.Text);
+            producto.Stock = Convert.ToInt32(txtStock.Text);
+            producto.Notas = txtNotas.Text;
+            producto.IDDepartamento = Convert.ToInt32(cmbDepartamento.SelectedValue);
+            producto.IDIVA = Convert.ToInt32(cmbIva.SelectedValue);
+
+            if (nuevo)
+            {
+                if (!Datos.NewProducto(producto))
+                {
+                    MessageBox.Show(Datos.Mensaje, "Errror");
+                    return;
+                }
+            }
+            else
+            {
+
+                if (!Datos.UpdateProducto(producto))
+                {
+                    MessageBox.Show(Datos.Mensaje, "Errror");
+                    return;
+                }
+            }
+            MessageBox.Show(Datos.Mensaje,"Confirmacion");
+            Met_llenarGrids();
+            DeshabilitarCampos();
+
+            if (nuevo) tsbUltimo_Click(sender, e);
+            else Met_llenarCombos();
+            
             
         }
 
@@ -281,8 +324,43 @@ namespace Sistema_Facturacion.Formularios
                 return false;
             }
 
+             return true;
+        }
 
-           // return true;
+        private void tsbEliminar_Click(object sender, EventArgs e)
+        {
+            //Dialogo respuesta de nuestro mensaje
+
+            DialogResult rta = MessageBox.Show("Estaa seguro de borrar el registro actual?", 
+                "Confirmacion", MessageBoxButtons.YesNo);
+
+            if (rta == DialogResult.No) return;
+
+            if (!Datos.DeleteProducto(Convert.ToInt32(txtIdProducto.Text))) 
+            {
+                MessageBox.Show(Datos.Mensaje,"Error");
+                return;
+            
+            }
+            MessageBox.Show(Datos.Mensaje,"Confirmacion");
+            Met_llenarGrids();
+            Met_llenarCampos();
+            tsbPrimero_Click(sender, e);
+            
+            
+        }
+
+        private void tsbBuscar_Click(object sender, EventArgs e)
+        {
+            frmBusqueda_Productos miBusqueda = new frmBusqueda_Productos();
+            miBusqueda.ShowDialog();
+
+            for (i = 0; i < dgvProductos.Rows.Count; i++)
+            {
+                if (miBusqueda.IDProducto ==Convert.ToInt32(dgvProductos.Rows[i].Cells[0].Value)) break;
+                
+            }
+            Met_llenarCampos();
         }
 
 

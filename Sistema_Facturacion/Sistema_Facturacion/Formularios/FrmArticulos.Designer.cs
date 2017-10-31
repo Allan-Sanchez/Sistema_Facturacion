@@ -30,15 +30,6 @@
         {
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.tsbPrimero = new System.Windows.Forms.ToolStripButton();
-            this.tsbAnterior = new System.Windows.Forms.ToolStripButton();
-            this.tsbSiguiente = new System.Windows.Forms.ToolStripButton();
-            this.tsbUltimo = new System.Windows.Forms.ToolStripButton();
-            this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
-            this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
-            this.tsbEditar = new System.Windows.Forms.ToolStripButton();
-            this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
-            this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
             this.lblIdProducto = new System.Windows.Forms.Label();
             this.txtIdProducto = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
@@ -55,7 +46,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtNotas = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.tsbPrimero = new System.Windows.Forms.ToolStripButton();
+            this.tsbAnterior = new System.Windows.Forms.ToolStripButton();
+            this.tsbSiguiente = new System.Windows.Forms.ToolStripButton();
+            this.tsbUltimo = new System.Windows.Forms.ToolStripButton();
+            this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
+            this.tsbEditar = new System.Windows.Forms.ToolStripButton();
+            this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
             this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
+            this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
+            this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
@@ -85,106 +85,6 @@
             this.toolStrip1.Stretch = true;
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // tsbPrimero
-            // 
-            this.tsbPrimero.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbPrimero.Image = global::Sistema_Facturacion.Properties.Resources.back;
-            this.tsbPrimero.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbPrimero.Name = "tsbPrimero";
-            this.tsbPrimero.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.tsbPrimero.Size = new System.Drawing.Size(23, 30);
-            this.tsbPrimero.Text = "toolStripButton1";
-            this.tsbPrimero.ToolTipText = "Va al primer registro";
-            this.tsbPrimero.Click += new System.EventHandler(this.tsbPrimero_Click);
-            // 
-            // tsbAnterior
-            // 
-            this.tsbAnterior.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbAnterior.Image = global::Sistema_Facturacion.Properties.Resources.left_arrow;
-            this.tsbAnterior.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbAnterior.Name = "tsbAnterior";
-            this.tsbAnterior.Size = new System.Drawing.Size(23, 30);
-            this.tsbAnterior.Text = "toolStripButton2";
-            this.tsbAnterior.ToolTipText = "Va al anterio registro";
-            this.tsbAnterior.Click += new System.EventHandler(this.tsbAnterior_Click);
-            // 
-            // tsbSiguiente
-            // 
-            this.tsbSiguiente.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbSiguiente.Image = global::Sistema_Facturacion.Properties.Resources.right_arrow;
-            this.tsbSiguiente.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbSiguiente.Name = "tsbSiguiente";
-            this.tsbSiguiente.Size = new System.Drawing.Size(23, 30);
-            this.tsbSiguiente.Text = "toolStripButton3";
-            this.tsbSiguiente.ToolTipText = "Va al siguiente registro";
-            this.tsbSiguiente.Click += new System.EventHandler(this.tsbSiguiente_Click);
-            // 
-            // tsbUltimo
-            // 
-            this.tsbUltimo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbUltimo.Image = global::Sistema_Facturacion.Properties.Resources.next;
-            this.tsbUltimo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbUltimo.Name = "tsbUltimo";
-            this.tsbUltimo.Size = new System.Drawing.Size(23, 30);
-            this.tsbUltimo.Text = "toolStripButton4";
-            this.tsbUltimo.ToolTipText = "Va al ultimo registro";
-            this.tsbUltimo.Click += new System.EventHandler(this.tsbUltimo_Click);
-            // 
-            // tsbNuevo
-            // 
-            this.tsbNuevo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbNuevo.Image = global::Sistema_Facturacion.Properties.Resources.new_user;
-            this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbNuevo.Name = "tsbNuevo";
-            this.tsbNuevo.Size = new System.Drawing.Size(23, 30);
-            this.tsbNuevo.Text = "Agregar";
-            this.tsbNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.tsbNuevo.ToolTipText = "Agregar un nuevo Articulo";
-            this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
-            // 
-            // tsbGuardar
-            // 
-            this.tsbGuardar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbGuardar.Enabled = false;
-            this.tsbGuardar.Image = global::Sistema_Facturacion.Properties.Resources.save;
-            this.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbGuardar.Name = "tsbGuardar";
-            this.tsbGuardar.Size = new System.Drawing.Size(23, 30);
-            this.tsbGuardar.Text = "Guardar";
-            this.tsbGuardar.ToolTipText = "Guardar un nuevo Articulo";
-            this.tsbGuardar.Click += new System.EventHandler(this.tsbGuardar_Click);
-            // 
-            // tsbEditar
-            // 
-            this.tsbEditar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbEditar.Image = global::Sistema_Facturacion.Properties.Resources.edit;
-            this.tsbEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbEditar.Name = "tsbEditar";
-            this.tsbEditar.Size = new System.Drawing.Size(23, 30);
-            this.tsbEditar.Text = "toolStripButton7";
-            this.tsbEditar.ToolTipText = "Editar un Articulo";
-            this.tsbEditar.Click += new System.EventHandler(this.tsbEditar_Click);
-            // 
-            // tsbEliminar
-            // 
-            this.tsbEliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbEliminar.Image = global::Sistema_Facturacion.Properties.Resources.delete1;
-            this.tsbEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbEliminar.Name = "tsbEliminar";
-            this.tsbEliminar.Size = new System.Drawing.Size(23, 30);
-            this.tsbEliminar.Text = "toolStripButton8";
-            this.tsbEliminar.ToolTipText = "Elimina un Articulo";
-            // 
-            // tsbBuscar
-            // 
-            this.tsbBuscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbBuscar.Image = global::Sistema_Facturacion.Properties.Resources.search;
-            this.tsbBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbBuscar.Name = "tsbBuscar";
-            this.tsbBuscar.Size = new System.Drawing.Size(23, 30);
-            this.tsbBuscar.Text = "toolStripButton9";
-            this.tsbBuscar.ToolTipText = "Busca un Articulo";
             // 
             // lblIdProducto
             // 
@@ -331,6 +231,86 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "* Campos Obligatorios ";
             // 
+            // tsbPrimero
+            // 
+            this.tsbPrimero.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbPrimero.Image = global::Sistema_Facturacion.Properties.Resources.back;
+            this.tsbPrimero.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbPrimero.Name = "tsbPrimero";
+            this.tsbPrimero.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.tsbPrimero.Size = new System.Drawing.Size(23, 30);
+            this.tsbPrimero.Text = "toolStripButton1";
+            this.tsbPrimero.ToolTipText = "Va al primer registro";
+            this.tsbPrimero.Click += new System.EventHandler(this.tsbPrimero_Click);
+            // 
+            // tsbAnterior
+            // 
+            this.tsbAnterior.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbAnterior.Image = global::Sistema_Facturacion.Properties.Resources.left_arrow;
+            this.tsbAnterior.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbAnterior.Name = "tsbAnterior";
+            this.tsbAnterior.Size = new System.Drawing.Size(23, 30);
+            this.tsbAnterior.Text = "toolStripButton2";
+            this.tsbAnterior.ToolTipText = "Va al anterio registro";
+            this.tsbAnterior.Click += new System.EventHandler(this.tsbAnterior_Click);
+            // 
+            // tsbSiguiente
+            // 
+            this.tsbSiguiente.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbSiguiente.Image = global::Sistema_Facturacion.Properties.Resources.right_arrow;
+            this.tsbSiguiente.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbSiguiente.Name = "tsbSiguiente";
+            this.tsbSiguiente.Size = new System.Drawing.Size(23, 30);
+            this.tsbSiguiente.Text = "toolStripButton3";
+            this.tsbSiguiente.ToolTipText = "Va al siguiente registro";
+            this.tsbSiguiente.Click += new System.EventHandler(this.tsbSiguiente_Click);
+            // 
+            // tsbUltimo
+            // 
+            this.tsbUltimo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbUltimo.Image = global::Sistema_Facturacion.Properties.Resources.next;
+            this.tsbUltimo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbUltimo.Name = "tsbUltimo";
+            this.tsbUltimo.Size = new System.Drawing.Size(23, 30);
+            this.tsbUltimo.Text = "toolStripButton4";
+            this.tsbUltimo.ToolTipText = "Va al ultimo registro";
+            this.tsbUltimo.Click += new System.EventHandler(this.tsbUltimo_Click);
+            // 
+            // tsbNuevo
+            // 
+            this.tsbNuevo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbNuevo.Image = global::Sistema_Facturacion.Properties.Resources.new_user;
+            this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbNuevo.Name = "tsbNuevo";
+            this.tsbNuevo.Size = new System.Drawing.Size(23, 30);
+            this.tsbNuevo.Text = "Agregar";
+            this.tsbNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.tsbNuevo.ToolTipText = "Agregar un nuevo Articulo";
+            this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
+            // 
+            // tsbEditar
+            // 
+            this.tsbEditar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbEditar.Image = global::Sistema_Facturacion.Properties.Resources.edit;
+            this.tsbEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbEditar.Name = "tsbEditar";
+            this.tsbEditar.Size = new System.Drawing.Size(23, 30);
+            this.tsbEditar.Text = "toolStripButton7";
+            this.tsbEditar.ToolTipText = "Editar un Articulo";
+            this.tsbEditar.Click += new System.EventHandler(this.tsbEditar_Click);
+            // 
+            // tsbGuardar
+            // 
+            this.tsbGuardar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbGuardar.Enabled = false;
+            this.tsbGuardar.Image = global::Sistema_Facturacion.Properties.Resources.save;
+            this.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbGuardar.Name = "tsbGuardar";
+            this.tsbGuardar.Size = new System.Drawing.Size(23, 30);
+            this.tsbGuardar.Text = "Guardar";
+            this.tsbGuardar.ToolTipText = "Guardar un nuevo Articulo";
+            this.tsbGuardar.Click += new System.EventHandler(this.tsbGuardar_Click);
+            // 
             // tsbCancelar
             // 
             this.tsbCancelar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -342,6 +322,28 @@
             this.tsbCancelar.Text = "toolStripButton1";
             this.tsbCancelar.ToolTipText = "Cancela los cambios realizados a registro actual";
             this.tsbCancelar.Click += new System.EventHandler(this.tsbCancelar_Click);
+            // 
+            // tsbEliminar
+            // 
+            this.tsbEliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbEliminar.Image = global::Sistema_Facturacion.Properties.Resources.delete1;
+            this.tsbEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbEliminar.Name = "tsbEliminar";
+            this.tsbEliminar.Size = new System.Drawing.Size(23, 30);
+            this.tsbEliminar.Text = "toolStripButton8";
+            this.tsbEliminar.ToolTipText = "Elimina un Articulo";
+            this.tsbEliminar.Click += new System.EventHandler(this.tsbEliminar_Click);
+            // 
+            // tsbBuscar
+            // 
+            this.tsbBuscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbBuscar.Image = global::Sistema_Facturacion.Properties.Resources.search;
+            this.tsbBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbBuscar.Name = "tsbBuscar";
+            this.tsbBuscar.Size = new System.Drawing.Size(23, 30);
+            this.tsbBuscar.Text = "toolStripButton9";
+            this.tsbBuscar.ToolTipText = "Busca un Articulo";
+            this.tsbBuscar.Click += new System.EventHandler(this.tsbBuscar_Click);
             // 
             // FrmArticulos
             // 
