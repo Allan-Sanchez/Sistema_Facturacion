@@ -55,6 +55,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtNotas = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
@@ -73,8 +74,9 @@
             this.tsbUltimo,
             this.toolStripSeparator1,
             this.tsbNuevo,
-            this.tsbGuardar,
             this.tsbEditar,
+            this.tsbGuardar,
+            this.tsbCancelar,
             this.tsbEliminar,
             this.tsbBuscar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
@@ -94,6 +96,7 @@
             this.tsbPrimero.Size = new System.Drawing.Size(23, 30);
             this.tsbPrimero.Text = "toolStripButton1";
             this.tsbPrimero.ToolTipText = "Va al primer registro";
+            this.tsbPrimero.Click += new System.EventHandler(this.tsbPrimero_Click);
             // 
             // tsbAnterior
             // 
@@ -104,6 +107,7 @@
             this.tsbAnterior.Size = new System.Drawing.Size(23, 30);
             this.tsbAnterior.Text = "toolStripButton2";
             this.tsbAnterior.ToolTipText = "Va al anterio registro";
+            this.tsbAnterior.Click += new System.EventHandler(this.tsbAnterior_Click);
             // 
             // tsbSiguiente
             // 
@@ -114,6 +118,7 @@
             this.tsbSiguiente.Size = new System.Drawing.Size(23, 30);
             this.tsbSiguiente.Text = "toolStripButton3";
             this.tsbSiguiente.ToolTipText = "Va al siguiente registro";
+            this.tsbSiguiente.Click += new System.EventHandler(this.tsbSiguiente_Click);
             // 
             // tsbUltimo
             // 
@@ -124,6 +129,7 @@
             this.tsbUltimo.Size = new System.Drawing.Size(23, 30);
             this.tsbUltimo.Text = "toolStripButton4";
             this.tsbUltimo.ToolTipText = "Va al ultimo registro";
+            this.tsbUltimo.Click += new System.EventHandler(this.tsbUltimo_Click);
             // 
             // tsbNuevo
             // 
@@ -135,6 +141,7 @@
             this.tsbNuevo.Text = "Agregar";
             this.tsbNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.tsbNuevo.ToolTipText = "Agregar un nuevo Articulo";
+            this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
             // 
             // tsbGuardar
             // 
@@ -146,6 +153,7 @@
             this.tsbGuardar.Size = new System.Drawing.Size(23, 30);
             this.tsbGuardar.Text = "Guardar";
             this.tsbGuardar.ToolTipText = "Guardar un nuevo Articulo";
+            this.tsbGuardar.Click += new System.EventHandler(this.tsbGuardar_Click);
             // 
             // tsbEditar
             // 
@@ -156,6 +164,7 @@
             this.tsbEditar.Size = new System.Drawing.Size(23, 30);
             this.tsbEditar.Text = "toolStripButton7";
             this.tsbEditar.ToolTipText = "Editar un Articulo";
+            this.tsbEditar.Click += new System.EventHandler(this.tsbEditar_Click);
             // 
             // tsbEliminar
             // 
@@ -322,6 +331,18 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "* Campos Obligatorios ";
             // 
+            // tsbCancelar
+            // 
+            this.tsbCancelar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbCancelar.Enabled = false;
+            this.tsbCancelar.Image = global::Sistema_Facturacion.Properties.Resources.delete__2_;
+            this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbCancelar.Name = "tsbCancelar";
+            this.tsbCancelar.Size = new System.Drawing.Size(23, 30);
+            this.tsbCancelar.Text = "toolStripButton1";
+            this.tsbCancelar.ToolTipText = "Cancela los cambios realizados a registro actual";
+            this.tsbCancelar.Click += new System.EventHandler(this.tsbCancelar_Click);
+            // 
             // FrmArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -384,6 +405,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNotas;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStripButton tsbCancelar;
 
     }
 }

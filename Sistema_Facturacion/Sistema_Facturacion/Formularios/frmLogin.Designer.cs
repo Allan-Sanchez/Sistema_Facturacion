@@ -51,6 +51,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(129, 20);
             this.txtUsuario.TabIndex = 1;
+            this.txtUsuario.Text = "Allan";
             // 
             // txtClave
             // 
@@ -59,6 +60,7 @@
             this.txtClave.PasswordChar = '*';
             this.txtClave.Size = new System.Drawing.Size(129, 20);
             this.txtClave.TabIndex = 3;
+            this.txtClave.Text = "seguro";
             // 
             // label2
             // 
@@ -71,6 +73,7 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.Image = global::Sistema_Facturacion.Properties.Resources.delete__2_;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.Location = new System.Drawing.Point(120, 144);
@@ -97,8 +100,10 @@
             // 
             // frmLogin
             // 
+            this.AcceptButton = this.btnAcentar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancelar;
             this.ClientSize = new System.Drawing.Size(227, 209);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAcentar);
@@ -112,7 +117,6 @@
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ingreso a Sistema";
-            
             this.ResumeLayout(false);
             this.PerformLayout();
 

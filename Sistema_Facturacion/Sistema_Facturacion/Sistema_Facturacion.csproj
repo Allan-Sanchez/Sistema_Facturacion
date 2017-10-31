@@ -55,6 +55,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Datos.cs" />
+    <Compile Include="Clases\Producto.cs" />
+    <Compile Include="Clases\Utilidades.cs" />
     <Compile Include="Formularios\FrmArticulos.cs">
       <SubType>Form</SubType>
     </Compile>
