@@ -116,5 +116,56 @@ namespace Sistema_Facturacion.Clases
             conexion.CerrarConexion();
             return true;
         }
+
+
+        public static Usuarios GetUsuario(string idUsuario) 
+        {
+
+            if (!conexion.AbrirConexion())
+            {
+                mensaje = conexion.Error;
+                conexion.CerrarConexion();
+                return null;
+            }
+
+            conexion.SQL = "SELECT * FROM Usuario WHERE Usuario= '"+idUsuario+"'";
+
+            if (!conexion.LlenarDataSet(false))
+            {
+                mensaje = conexion.Error;
+                conexion.CerrarConexion();
+                return null;
+            }
+
+            if (conexion.Ds == null)
+            {
+                mensaje = "Usuario no Existe ";
+                conexion.CerrarConexion();
+                return null;
+            }
+
+            if (conexion.Ds.Tables[0].Rows.Count == 0)
+            {
+                mensaje = "Usuario no Existe ";
+                conexion.CerrarConexion();
+                return null;
+            }
+
+            Usuarios usuario = new Usuarios();
+            usuario.IdUsuario = conexion.Ds.Tables[0].Rows[0].ItemArray[0].ToString();  //itemarray es cada campo
+            usuario.Clave = conexion.Ds.Tables[0].Rows[0].ItemArray[1].ToString();
+            usuario.Nombres = conexion.Ds.Tables[0].Rows[0].ItemArray[2].ToString();
+            usuario.Apellidos = conexion.Ds.Tables[0].Rows[0].ItemArray[3].ToString();
+            usuario.IDPerfil = (int)conexion.Ds.Tables[0].Rows[0].ItemArray[4];
+
+
+            conexion.CerrarConexion();
+            return usuario;
+
+        
+        
+        }
+
+
     }
 }

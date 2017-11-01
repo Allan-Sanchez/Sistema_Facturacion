@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sistema_Facturacion.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,15 @@ namespace Sistema_Facturacion.Formularios
 {
     public partial class frmPrincipal : Form
     {
+
+        private Usuarios usuariologiado;
+
+        internal Usuarios Usuariologiado
+        {
+            get { return usuariologiado; }
+            set { usuariologiado = value; }
+        }
+
         public frmPrincipal()
         {
             InitializeComponent();
@@ -38,10 +48,18 @@ namespace Sistema_Facturacion.Formularios
         private void productosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmArticulos miArticulos = new FrmArticulos();
-
+           
             miArticulos.MdiParent = this; // MdiParent = quien es el padre de el formulario this= pfrmPrincipal
+            miArticulos.Usuariologiado = this.usuariologiado;
             miArticulos.Show();
         }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+            tssUsuario.Text = usuariologiado.Nombres + " "  + usuariologiado.Apellidos;
+        }
+
+       
 
         
 

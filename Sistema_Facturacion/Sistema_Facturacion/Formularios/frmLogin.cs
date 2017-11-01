@@ -44,8 +44,12 @@ namespace Sistema_Facturacion
                 return;
             }
 
+
+            Usuarios usuariologeado = Datos.GetUsuario(txtUsuario.Text);
+
             frmPrincipal miPrincipal = new frmPrincipal();
             this.Hide();
+            miPrincipal.Usuariologiado = usuariologeado;
             miPrincipal.Show();
             
 
