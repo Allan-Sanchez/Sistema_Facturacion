@@ -1,0 +1,47 @@
+[33mcommit eb7678169735df21c6a6357787555c76ecf12a6c[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Allan-Sanchez <asanchezrixtun@gmail.com>
+Date:   Tue Oct 31 23:22:33 2017 -0600
+
+    Validamos los permisos de Usuarios dentro de la Aplicacion
+
+[33mcommit c7f1fc448a48d0ee0b1895ede8b2802ab48f002d[m
+Author: Allan-Sanchez <asanchezrixtun@gmail.com>
+Date:   Tue Oct 31 17:45:22 2017 -0600
+
+    Agregamos la busqueda a nuestro proyecto
+
+[33mcommit 2dca9ef47845caf4e9b7b8a3087f6ba309317bdb[m
+Author: Allan-Sanchez <asanchezrixtun@gmail.com>
+Date:   Mon Oct 30 21:12:11 2017 -0600
+
+    Altas y bajas de nuestras Tabla Productos
+
+[33mcommit 855f127bc8cbdbd29344d9036d85a099a005ff4f[m
+Author: Allan-Sanchez <asanchezrixtun@gmail.com>
+Date:   Thu Oct 26 14:19:13 2017 -0600
+
+    Creamos el Formulario padre de nuestra aplicacion
+
+[33mcommit 6705ca3deca0a4a9fa24c2f31035b368f1a0b491[m
+Author: Allan-Sanchez <asanchezrixtun@gmail.com>
+Date:   Tue Oct 24 20:13:34 2017 -0600
+
+    Vista de la tabla productos
+
+[33mcommit 2e0c4a00d5667ef477189a7518ccefdbfa2f6d7b[m
+Author: Allan-Sanchez <asanchezrixtun@gmail.com>
+Date:   Tue Oct 24 13:20:55 2017 -0600
+
+    Agregamos en Script de la base de datos y en .back de la base de datos
+
+[33mcommit b747b9a2c55f007d4cae29550221ccc06be1cb3c[m
+Author: Allan-Sanchez <asanchezrixtun@gmail.com>
+Date:   Tue Oct 24 13:16:50 2017 -0600
+
+    Conexion con la Base de Datos y creacion del Login
+
+[33mcommit 231ea759c4c8bd4cb28ffbd22c9c72bb1f24d403[m
+Author: Allan-Sanchez <asanchezrixtun@gmail.com>
+Date:   Tue Oct 24 13:10:40 2017 -0600
+
+    Initial commit

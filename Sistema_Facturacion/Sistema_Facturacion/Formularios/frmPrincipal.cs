@@ -59,6 +59,16 @@ namespace Sistema_Facturacion.Formularios
             tssUsuario.Text = usuariologiado.Nombres + " "  + usuariologiado.Apellidos;
         }
 
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            frmClientes miCliente = new frmClientes();
+
+            miCliente.MdiParent = this;
+            miCliente.Usuariologiado = this.usuariologiado;
+            miCliente.Show();
+        }
+
        
 
         

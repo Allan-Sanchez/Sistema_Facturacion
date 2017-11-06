@@ -54,10 +54,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\Datos.cs" />
+    <Compile Include="Clases\DSFacturacion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSFacturacion.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Clases\Producto.cs" />
     <Compile Include="Clases\Usuarios.cs" />
     <Compile Include="Clases\Utilidades.cs" />
+    <Compile Include="FacturacionDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FacturacionDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmArticulos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +80,18 @@
     </Compile>
     <Compile Include="Formularios\frmBusqueda_Productos.Designer.cs">
       <DependentUpon>frmBusqueda_Productos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmbusque_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmbusque_Cliente.Designer.cs">
+      <DependentUpon>frmbusque_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmClientes.Designer.cs">
+      <DependentUpon>frmClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmConsulta_Articulos.cs">
       <SubType>Form</SubType>
@@ -96,6 +119,12 @@
     <EmbeddedResource Include="Formularios\frmBusqueda_Productos.resx">
       <DependentUpon>frmBusqueda_Productos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmbusque_Cliente.resx">
+      <DependentUpon>frmbusque_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmClientes.resx">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmConsulta_Articulos.resx">
       <DependentUpon>frmConsulta_Articulos.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,6 +144,28 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Clases\DSFacturacion.xsc">
+      <DependentUpon>DSFacturacion.xsd</DependentUpon>
+    </None>
+    <None Include="Clases\DSFacturacion.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSFacturacion.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Clases\DSFacturacion.xss">
+      <DependentUpon>DSFacturacion.xsd</DependentUpon>
+    </None>
+    <None Include="FacturacionDataSet.xsc">
+      <DependentUpon>FacturacionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FacturacionDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FacturacionDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FacturacionDataSet.xss">
+      <DependentUpon>FacturacionDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
